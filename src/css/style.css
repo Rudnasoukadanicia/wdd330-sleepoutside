@@ -90,7 +90,7 @@ p {
   margin-top: -1.3em;
 }
 
-.logo--square > div {
+.logo--square>div {
   margin-top: -1.7em;
 }
 
@@ -157,11 +157,18 @@ button {
 }
 
 .product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5em;
+  list-style-type: none;
+}
+
+/* .product-list {
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
   justify-content: center;
-}
+} */
 
 .product-list a {
   text-decoration: none;
@@ -169,12 +176,18 @@ button {
 }
 
 /* Styles for product lists */
-.product-card {
+/* .product-card {
   flex: 1 1 45%;
   margin: 0.25em;
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
+} */
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 
 .product-card h2,
