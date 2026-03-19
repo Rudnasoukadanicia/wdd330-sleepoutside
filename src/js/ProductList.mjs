@@ -1,6 +1,9 @@
 // src/js/ProductList.mjs
 
-import { renderListWithTemplate } from './utils.mjs';
+import { renderListWithTemplate } from "./utils.mjs"
+import { loadHeaderFooter } from "./utils.mjs";
+
+loadHeaderFooter();;
 
 // ——— Template d'une carte produit ———
 function productCardTemplate(product) {

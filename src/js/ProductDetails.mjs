@@ -1,3 +1,6 @@
+import { loadHeaderFooter } from "./utils.mjs";
+
+loadHeaderFooter();
 export default class ProductDetails {
     constructor(productID, dataSource) {
         this.productID = productID;
@@ -8,7 +11,7 @@ export default class ProductDetails {
         this.product = await this.dataSource.findProductById(this.productID);
         this.renderProductDetails();
 
-        document.getElementById('addToCart').addEventListener('click', this.addProductToCart.bind(this));
+        document.getElementById("addToCart").addEventListener("click", this.addProductToCart.bind(this));
 
     }
 
@@ -17,7 +20,7 @@ export default class ProductDetails {
     }
 
     renderProductDetails() {
-        const element = document.querySelector('.product-detail');
+        const element = document.querySelector(".product-detail");
         element.innerHTML = `
         <h2>${this.product.Name}</h2>
         <p>${this.product.Description}</p>
